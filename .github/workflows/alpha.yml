@@ -1,0 +1,28 @@
+name: Alpha Builds
+
+on:
+  push:
+    branches: master
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Setup NodeJS
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: 10.x
+    
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+    
+    - name: Install Dependencies
+      run: |
+        yarn
+        cd gulp/
+        yarn
+        yarn gulp
+        
