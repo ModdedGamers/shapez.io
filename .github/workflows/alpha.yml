@@ -21,6 +21,8 @@ jobs:
     
     - name: Install Dependencies
       run: |
+        sudo apt-get update
+        sudo apt-get install ffmpeg
         yarn
         cd gulp/
         yarn
