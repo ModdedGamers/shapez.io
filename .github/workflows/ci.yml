@@ -4,7 +4,6 @@ on:
     push:
         branches:
             - master
-            - ModdedGamers-GH-Actions
     pull_request:
         branches:
             - master
